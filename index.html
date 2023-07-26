@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>School Management App - Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>School Management Dashboard</h1>
+    <div class="dashboard-grid">
+      <div class="card students-card">
+        <h2>Students </h2>
+        <table id="studentsTable">
+          <!-- Students data will be populated here -->
+        </table>
+      </div>
+      <div class="card chart-card">
+        <h2>Class Performance Chart</h2>
+        <div class="chart-container">
+          <canvas id="classChart"></canvas>
+        </div>
+      </div>
+      <div class="card notes-card">
+        <h2>Class Notes</h2>
+        <ul id="classNotesList">
+          <!-- Class notes data will be populated here -->
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

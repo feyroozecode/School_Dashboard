@@ -1,0 +1,117 @@
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+  }
+  
+  h1 {
+    text-align: center;
+  }
+  
+  /* Dashboard grid */
+  .dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+  }
+    
+  .card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .card h2 {
+    margin-top: 0;
+    text-align: center;
+  }
+  
+  /* Students table styles */
+  .students-card {
+    grid-column: span 2;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  th, td {
+    padding: 10px;
+    text-align: left;
+  }
+  
+  th {
+    background-color: #007bff;
+    color: #ffffff;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #f8f8f8;
+  }
+  
+  /* Chart card styles */
+  .chart-card {
+    grid-column: span 1; /* Adjust span to 1 to allocate one column for the chart card */
+    display: flex; /* Add flex to align the content within the chart card */
+    flex-direction: column; /* Arrange the content in a column */
+    justify-content: center; /* Vertically center the content */
+  }
+  
+  .chart-container {
+    max-width: 100%;
+    margin: 0 auto;
+    flex: 1; /* Allow the chart container to occupy all available space vertically */
+  }
+  
+  /* Notes card styles */
+  .notes-card {
+    grid-column: span 2;
+  }
+  
+  .notes-card ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .notes-card li {
+    margin-bottom: 10px;
+  }
+  
+  /* Add fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Apply fade-in animation to all cards */
+.card {
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* Apply a transition for smooth movement of cards */
+.dashboard-grid {
+  transition: grid-template-columns 0.3s ease-in-out;
+}
+
+/* Adjust card position for chart and notes cards */
+.chart-card,
+.notes-card {
+  grid-column: span 2;
+}
